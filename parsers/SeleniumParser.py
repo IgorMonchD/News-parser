@@ -10,7 +10,7 @@ import logging
 
 logging.basicConfig(filename='errors.log', level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
 
-class NewsScraper:
+class NewsScraperSelenium:
     def __init__(self):
         self.options = Options()
         self.options.add_argument("--start-maximized")
@@ -78,7 +78,7 @@ class NewsScraper:
         self.driver.quit()
 
 # Использование класса
-scraper = NewsScraper()
+scraper = NewsScraperSelenium()
 news_data = scraper.scrape_all_categories()
 scraper.save_to_csv(news_data)
 scraper.close()

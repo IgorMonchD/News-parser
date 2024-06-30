@@ -5,7 +5,7 @@ import logging
 
 logging.basicConfig(filename='errors.log', level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
 
-class NewsScraper:
+class NewsScraperBeautifulSoup:
     def __init__(self):
         self.main_url = 'https://www.rbc.ru/'
         self.categories_urls = self.get_categories_from_footer()
@@ -69,6 +69,6 @@ class NewsScraper:
         df.to_csv(filename, index=False, encoding='utf-8')
 
 # Использование класса
-scraper = NewsScraper()
+scraper = NewsScraperBeautifulSoup()
 news_data = scraper.scrape_all_categories()
 scraper.save_to_csv(news_data)
