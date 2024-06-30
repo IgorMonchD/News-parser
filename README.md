@@ -17,19 +17,19 @@
    - **Windows:**
 
      ```bash
-     myenv\Scripts\activate
+      .venv\Scripts\activate
      ```
 
    - **macOS/Linux:**
 
      ```bash
-     source myenv/bin/activate
+     source  .venv/bin/activate
      ```
 
    После активации виртуального окружения, ваш командный prompt изменится, чтобы показать имя активного окружения, например:
 
    ```bash
-   (myenv) C:\YourProject>
+   (.venv) C:\YourProject>
    ```
 
 3. **Установка пакетов из `requirements.txt`:**
